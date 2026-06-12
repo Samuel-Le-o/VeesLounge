@@ -1,0 +1,296 @@
+/* Container Workspace Layout Initialization */
+.collection-page-container {
+  padding: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #1e293b;
+}
+
+/* Header Context Configurations */
+.collection-page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.collection-page-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.back-btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: #64748b;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 0;
+  transition: color 0.2s;
+}
+
+.back-btn-link:hover {
+  color: #0f172a;
+}
+
+/* Main Form Card Elements */
+.collection-form-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  overflow: hidden;
+}
+
+/* Fluid Form Dual Grid Configs (Desktop Default) */
+.form-layout-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.form-main-inputs, .form-sidebar-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form Input Field Structural Rows */
+.input-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.input-field-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.field-icon {
+  color: #94a3b8;
+}
+
+.input-field-group input[type="text"],
+.input-field-group textarea,
+.input-field-group select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #0f172a;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-field-group input[type="text"]:focus,
+.input-field-group textarea:focus,
+.input-field-group select:focus {
+  outline: none;
+  border-color: #eab308; /* Matches dashboard yellow accent accent theme */
+  box-shadow: 0 0 0 3px rgba(234, 179, 8, 0.15);
+}
+
+.field-helper-text {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+/* Media Graphic Banner Uploader Styling */
+.media-uploader-box {
+  border: 2px dashed #cbd5e1;
+  border-radius: 8px;
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8fafc;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.media-uploader-box:hover {
+  background-color: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+.uploader-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.placeholder-icon {
+  font-size: 28px;
+  color: #94a3b8;
+  margin-bottom: 4px;
+}
+
+.uploader-placeholder span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+}
+
+.uploader-placeholder small {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.preview-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.preview-container img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.change-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.preview-container:hover .change-image-overlay {
+  opacity: 1;
+}
+
+/* Action Execution Buttons Row */
+.form-footer-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 32px;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 20px;
+}
+
+.cancel-action-btn {
+  padding: 10px 20px;
+  background: none;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cancel-action-btn:hover {
+  background-color: #f8fafc;
+}
+
+.save-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  background-color: #0f172a; /* Sophisticated deep slate corporate fill */
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.save-action-btn:hover {
+  background-color: #1e293b;
+}
+
+.save-action-btn:disabled, .cancel-action-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Informative Status Banner Notifications */
+.form-alert-banner {
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.form-alert-banner.success {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
+}
+
+.form-alert-banner.error {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}
+
+/* ==========================================================================
+   📱 PHONE AND TABLET RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .collection-page-container {
+    padding: 16px;
+  }
+
+  /* Collapse the 2-column layout into a single vertical stack */
+  .form-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .collection-form-card {
+    padding: 16px;
+  }
+
+  .form-footer-actions {
+    flex-direction: column-reverse; /* Put primary execution save button directly on top for mobile thumb reach */
+    gap: 10px;
+  }
+
+  .cancel-action-btn, .save-action-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px; /* Marginally larger touch target space */
+  }
+}

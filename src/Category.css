@@ -1,0 +1,336 @@
+/* Custom CSS Variables matching the Modern Dark/Pink Palette */
+:root {
+  --admin-bg-deep: #0a0a0c;
+  --admin-card-bg: #121216;
+  --admin-border-gray: #22222a;
+  --pink-accent: #ff4a85;
+  --pink-accent-hover: #e0356c;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0ab;
+}
+
+.admin-dashboard-wrapper {
+  background-color: #FDF5F7;
+  display: flex;
+  min-height: 100vh;
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+
+
+
+/* Main Dashboard Sheet Content Area */
+.admin-content-container {
+  flex-grow: 1;
+  padding: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.content-header-bar h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+  color: #000000;
+}
+
+.content-header-bar p {
+  color: #000000;
+  font-size: 0.95rem;
+}
+
+/* Content Grid Breakdown splitting Actions and Visual Displays */
+.category-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+  margin-top: 2.5rem;
+  align-items: start;
+}
+
+.category-card-form, .category-card-display {
+  background-color: var(--admin-card-bg);
+  border: 1px solid var(--admin-border-gray);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.category-card-form h2, .category-card-display h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--admin-border-gray);
+  padding-bottom: 0.75rem;
+}
+
+/* High-contrast forms and interactive buttons */
+.modern-form-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-input-group label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-input-group input[type="text"] {
+  background-color: #1a1a24;
+  border: 1px solid var(--admin-border-gray);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-input-group input[type="text"]:focus {
+  outline: none;
+  border-color: var(--pink-accent);
+}
+
+/* Custom Single-File Media Uploader triggers */
+.hidden-file-input {
+  display: none;
+}
+
+.uploader-trigger-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 2rem;
+  background-color: #1a1a24;
+  border: 2px dashed var(--admin-border-gray);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.uploader-trigger-label:hover {
+  border-color: var(--pink-accent);
+  background-color: #20202c;
+  color: var(--text-primary);
+}
+
+.upload-icon {
+  font-size: 1.5rem;
+}
+
+/* Image preview containers */
+.single-preview-wrapper p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.preview-frame {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--admin-border-gray);
+  max-width: 240px;
+}
+
+.preview-frame img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.remove-preview-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.75);
+  border: none;
+  color: #ff4d4d;
+  padding: 0.5rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s;
+}
+
+.remove-preview-btn:hover {
+  background: rgba(255, 77, 77, 0.2);
+  color: #ffffff;
+}
+
+/* Core Form Submission CTA controls */
+.submit-action-btn {
+  background-color: var(--pink-accent);
+  color: var(--text-primary);
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 0.5rem;
+}
+
+.submit-action-btn:hover {
+  background-color: var(--pink-accent-hover);
+}
+
+.form-error-toast {
+  background-color: rgba(255, 77, 77, 0.1);
+  border: 1px solid #ff4d4d;
+  color: #ff4d4d;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* Rows display panel for active data states */
+.categories-scroller-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.category-row-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1a1a24;
+  border: 1px solid var(--admin-border-gray);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.row-item-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.row-thumbnail-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #0f0f13;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--admin-border-gray);
+  flex-shrink: 0;
+}
+
+.row-thumbnail-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.empty-thumbnail-fallback {
+  font-size: 1.2rem;
+}
+
+.row-text-info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.system-badge {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--text-secondary);
+}
+
+.custom-badge {
+  background-color: rgba(255, 74, 133, 0.15);
+  color: var(--pink-accent);
+}
+
+.delete-category-btn {
+  background-color: transparent;
+  border: 1px solid #ff4d4d;
+  color: #ff4d4d;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.delete-category-btn:hover {
+  background-color: #ff4d4d;
+  color: #ffffff;
+}
+
+/* ========================================================= */
+/* PHONE RESPONSIVE BREAKPOINT QUERY SYSTEM                 */
+/* ========================================================= */
+@media (max-width: 968px) {
+  .category-split-grid {
+    grid-template-columns: 1fr; /* Drop side-by-side view to stacked boxes */
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-dashboard-wrapper {
+    flex-direction: column; /* Move sidebar above content on phone screens */
+  }
+
+  .sidebar-placeholder-zone {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--admin-border-gray);
+    padding: 1.25rem;
+  }
+
+  .sidebar-mock-logo {
+    margin-bottom: 1rem;
+  }
+
+  .sidebar-mock-links {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+  }
+
+  .sidebar-mock-links li {
+    margin-bottom: 0;
+    white-space: nowrap;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .admin-content-container {
+    padding: 1.25rem;
+  }
+
+  .content-header-bar h1 {
+    font-size: 1.6rem;
+  }
+  
+  .category-card-form, .category-card-display {
+    padding: 1.25rem;
+  }
+}

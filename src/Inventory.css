@@ -1,0 +1,257 @@
+/* ==========================================================================
+   UNIFIED INVENTORY DASHBOARD WORKSPACE SCROLLBARS & STRUCTURES
+   ========================================================================== */
+
+.inventory-workspace-split {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.pane-left {
+  flex: 1.1;
+  max-width: 480px;
+  padding: 24px;
+}
+
+.pane-right-workspace-stack {
+  flex: 1.4;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0; /* Prevents nested flex text tables from expanding layouts */
+}
+
+.sub-panel-card {
+  padding: 24px;
+}
+
+.panel-heading {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 20px 0;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 12px;
+}
+
+.header-no-margin {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border: none;
+}
+
+/* --- ADD NEW PRODUCT SHIELD ELEMENT LAYOUTS --- */
+.media-uploader-box {
+  border: 2px dashed #cbd5e1;
+  border-radius: 8px;
+  background-color: #fafbfc;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  color: #64748b;
+  transition: all 0.2s ease;
+  margin-bottom: 20px;
+}
+
+.media-uploader-box:hover {
+  background-color: #fff5f7;
+  border-color: #d6336c;
+  color: #d6336c;
+}
+
+.uploader-camera-icon {
+  font-size: 2rem;
+}
+
+.uploader-main-prompt {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.product-creation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-field-control {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #1e293b;
+  outline: none;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease;
+}
+
+.form-field-control:focus {
+  border-color: #d6336c;
+  box-shadow: 0 0 0 1px rgba(214, 51, 108, 0.1);
+}
+
+.text-area-control {
+  resize: vertical;
+  font-family: inherit;
+}
+
+.mini-prod-meta-labels {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mini-prod-sku-subtitle {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+/* --- INTERACTIVE BRAND PROMOTION ITEM LINES --- */
+.promotions-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.promotion-row-item-bar {
+  border: 1px solid #eaedf1;
+  border-radius: 8px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: #fafbfc;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.promotion-row-item-bar:hover {
+  background-color: #f8fafc;
+}
+
+.promo-index-num {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.text-pink {
+  color: #d6336c;
+}
+
+.promo-description-details {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #334155;
+  flex: 1;
+}
+
+.promo-item-arrow {
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+.select-promo-btn {
+  align-self: center;
+  margin-top: 4px;
+  padding: 10px 24px !important;
+}
+
+/* --- MONITORED LOW STOCK THREAT MODULE PANELS --- */
+.low-stock-header-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.alerts-list-stacked-rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.alert-stock-item-row {
+  padding: 12px 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f8fafc;
+}
+
+.alert-stock-item-row:last-child {
+  border-bottom: none;
+}
+
+.alert-product-title-text {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT CONTEXT BREAKPOINT TRANSLATIONS
+   ========================================================================== */
+
+@media (max-width: 992px) {
+  .inventory-workspace-split {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pane-left {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .orders-main-area {
+    padding: 20px 16px;
+  }
+
+  .mobile-hamburger-btn {
+    display: block;
+  }
+
+  .counters-summary-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .row-action-buttons-cluster {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+  }
+
+  .promotion-row-item-bar {
+    padding: 12px;
+  }
+  
+  .select-promo-btn {
+    width: 100%;
+  }
+
+  /* Structural slide layout sidebars for mobile drawers */
+  .admin-layout .admin-sidebar {
+    position: fixed !important;
+    top: 0;
+    left: -280px;
+    width: 260px;
+    height: 100vh !important;
+    z-index: 99999 !important;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+
+  .admin-layout.sidebar-active .admin-sidebar {
+    left: 0 !important;
+  }
+}

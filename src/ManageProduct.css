@@ -1,0 +1,302 @@
+/* Main Functional Component Layout */
+.inventory-main {
+  flex: 1;
+  padding: 30px 40px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* Added mobile scroll physics and momentum optimizations */
+  -webkit-overflow-scrolling: touch;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Page Header Navigation Bar */
+.inventory-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inventory-header h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: #64748b;
+}
+
+.header-icon { font-size: 1.25rem; cursor: pointer; }
+.badge-wrapper { position: relative; }
+.notif-badge {
+  position: absolute; top: -5px; right: -5px; background-color: #df446e;
+  color: white; font-size: 0.65rem; padding: 2px 5px; border-radius: 10px; font-weight: bold;
+}
+.top-profile-img { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; }
+
+/* Interactive Search and Filters Toolbar Row */
+.inventory-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.add-product-btn {
+  background: linear-gradient(180deg, #e65c84 0%, #df446e 100%);
+  color: white; border: none; padding: 12px 20px; font-weight: 600;
+  border-radius: 6px; cursor: pointer; display: flex; align-items: center; gap: 8px;
+  font-size: 0.9rem;
+}
+.add-product-btn:hover { opacity: 0.95; }
+.plus-sign { font-size: 1.1rem; }
+
+.search-bar-wrapper {
+  position: relative; flex: 1; max-width: 450px; display: flex; align-items: center;
+}
+
+.input-search-icon { position: absolute; left: 14px; color: #94a3b8; }
+.toolbar-search {
+  width: 100%; padding: 12px 14px 12px 40px; border: 1px solid #cbd5e1;
+  border-radius: 6px 0 0 6px; outline: none; font-size: 0.9rem; border-right: none;
+}
+
+.search-trigger-btn {
+  border: 1px solid #cbd5e1; background-color: #f8fafc; padding: 12px 16px;
+  border-radius: 0 6px 6px 0; color: #64748b; cursor: pointer; display: flex;
+}
+
+.toolbar-action-btn {
+  background-color: white; border: 1px solid #cbd5e1; border-radius: 6px;
+  padding: 12px 18px; font-size: 0.9rem; font-weight: 500; color: #475569;
+  cursor: pointer; display: flex; align-items: center; gap: 8px;
+}
+.toolbar-action-btn:hover { background-color: #f8fafc; }
+
+/* Main Product Ledger Database Grid Container */
+.table-panel {
+  background-color: white; border: 1px solid #eaedf1; border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.01);
+}
+
+.table-responsive { 
+  overflow-x: auto; 
+  /* Added momentum physics for touch-swipe tables */
+  -webkit-overflow-scrolling: touch;
+}
+
+.products-table { width: 100%; border-collapse: collapse; text-align: left; }
+.products-table th {
+  padding: 14px 20px; font-size: 0.85rem; color: #64748b; font-weight: 600;
+  border-bottom: 1px solid #f1f5f9; background-color: #fafbfc;
+}
+
+.products-table td { padding: 14px 20px; border-bottom: 1px solid #f1f5f9; font-size: 0.95rem; vertical-align: middle; }
+
+/* Image Row Element Details alignment */
+.product-identity-cell { display: flex; align-items: center; gap: 14px; }
+.product-thumb { width: 44px; height: 44px; border-radius: 6px; object-fit: cover; background-color: #f8fafc; }
+.product-title-text { font-weight: 500; color: #1e293b; }
+
+.category-tag {
+  background-color: #f1f5f9; padding: 4px 10px; border-radius: 4px;
+  font-size: 0.85rem; font-weight: 500; color: #475569;
+}
+
+.stock-cell-data { font-weight: 500; color: #475569; }
+.danger-text { color: #e65c84; font-weight: 600; }
+.price-text-bold { font-weight: 700; color: #1e293b; }
+
+/* Status Labels Custom Badges formatting overlay */
+.status-pill {
+  padding: 5px 12px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; display: inline-block;
+}
+.pill-active { background-color: #ecfdf5; color: #10b981; }
+.pill-inactive { background-color: #fff1f2; color: #f43f5e; }
+
+/* Control Button Cluster Items execution context alignment */
+.center-header { text-align: center; }
+.action-button-cluster { display: flex; gap: 4px; justify-content: center; align-items: center; }
+
+.row-btn {
+  border: 1px solid #cbd5e1; padding: 6px 12px; font-size: 0.85rem;
+  font-weight: 600; border-radius: 4px; cursor: pointer; background: white;
+}
+.edit-row-btn { color: #475569; }
+.delete-row-btn { color: #df446e; border-color: #fcced7; background-color: #fff5f7; }
+.row-dropdown-toggle {
+  border: 1px solid #cbd5e1; background: white; padding: 6px 8px;
+  border-radius: 4px; cursor: pointer; color: #64748b; display: flex;
+}
+
+/* Pagination Control Strip Container Formatting element definitions */
+.table-pagination-footer {
+  padding: 16px 20px; display: flex; justify-content: space-between;
+  align-items: center; border-top: 1px solid #f1f5f9; background-color: #fafbfc;
+  border-radius: 0 0 8px 8px;
+}
+
+.entries-count { font-size: 0.85rem; color: #64748b; font-weight: 500; }
+.pagination-controls { display: flex; align-items: center; gap: 4px; }
+
+.page-arrow-btn, .page-num-btn {
+  border: 1px solid #cbd5e1; background: white; width: 32px; height: 32px;
+  border-radius: 4px; display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem; font-weight: 500; color: #475569; cursor: pointer;
+}
+
+.page-num-btn.active-page {
+  background-color: #df446e; color: white; border-color: #df446e; font-weight: 600;
+}
+.pagination-ellipsis { color: #94a3b8; padding: 0 4px; }
+
+/* Bottom Context Alert Cards blocks execution layout definitions */
+.summary-boxes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.summary-box-card {
+  background-color: white; border: 1px solid #eaedf1; border-radius: 8px;
+  padding: 20px; display: flex; flex-direction: column; gap: 14px;
+}
+
+.box-card-title {
+  font-size: 0.95rem; font-weight: 600; color: #334155; display: flex; align-items: center; gap: 8px;
+}
+.box-title-icon {
+  width: 18px; height: 18px; border-radius: 50%; display: inline-flex;
+  align-items: center; justify-content: center; font-size: 0.7rem; color: white; font-weight: bold;
+}
+.yellow-dot { background-color: #f59e0b; }
+.orange-dot { background-color: #f97316; }
+
+.box-list-items {
+  list-style: none; display: flex; flex-direction: column; gap: 8px; padding-left: 26px;
+}
+.box-list-items li { font-size: 0.9rem; color: #475569; font-weight: 500; position: relative; }
+.box-list-items li::before {
+  content: "•"; color: #cbd5e1; font-size: 1.2rem; position: absolute; left: -16px; top: -2px;
+}
+
+/* Special Floating Action layout alignment definition overrides */
+.prompt-card-relative { position: relative; padding-bottom: 60px; }
+.floating-action-bottom-btn {
+  position: absolute; bottom: 16px; right: 20px; background-color: #df446e;
+  color: white; border: none; padding: 10px 16px; border-radius: 6px;
+  font-size: 0.85rem; font-weight: 600; cursor: pointer; box-shadow: 0 4px 10px rgba(223, 68, 110, 0.15);
+}
+.floating-action-bottom-btn:hover { background-color: #c9355c; }
+
+/* ==========================================================================
+   MOBILE BREAKPOINT LAYOUT COMPRESSION (PHONES)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .inventory-main {
+    padding: 20px 14px !important;
+    /* Clean, elastic phone scroll handling */
+    -webkit-overflow-scrolling: touch;
+
+  }
+
+  .inventory-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .inventory-header h1 {
+    font-size: 1.35rem !important;
+  }
+
+  /* 1. Stack toolbar modules cleanly into rows */
+  .inventory-toolbar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+
+  .add-product-btn,
+  .search-bar-wrapper,
+  .export-csv-btn {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .search-bar-wrapper {
+    display: flex;
+  }
+
+  .toolbar-search {
+    flex: 1;
+  }
+
+  /* 2. Constrain container and align dropdown list components */
+  .filter-button-container {
+    width: auto !important;
+    display: inline-block;
+  }
+
+  .toolbar-action-btn {
+    width: 100% !important;
+    justify-content: center;
+  }
+
+  /* THE DROP-DOWN BOX MOBILE OVERFLOW FIX */
+  .inventory-toolbar .filter-dropdown-select {
+    position: absolute !important;
+    top: 42px !important;
+    left: 0 !important;
+    width: 100% !important;
+    min-width: 190px !important;
+    max-width: 240px !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15) !important;
+  }
+
+  /* 3. Render list panels as scrollable grids */
+  .table-panel {
+    overflow-x: auto !important;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .products-table {
+    min-width: 600px; /* Lets table scroll sideways safely without squishing columns */
+  }
+
+  /* Summary blocks */
+  .summary-boxes-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+}
+
+/* Media Query for Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  /* 1. Force the side panel modal to fit completely within the mobile screen height */
+  .modal-content-card {
+    max-width: 100% !important; /* Spans the full width of the phone screen */
+    height: 100vh !important;    /* Forces it to exactly match the screen height */
+    display: flex;
+    flex-direction: column;      /* Keeps header, body, and footer stacked vertically */
+    overflow: hidden;            /* Prevents the entire card itself from breaking the layout */
+  }
+
+  /* 2. Target the inner body container to handle the actual scrolling framework */
+  .modal-content-card {
+    flex: 1;                     /* Takes up all remaining vertical space */
+    overflow-x: auto !important; /* Enables vertical scrolling when content overflows */
+    -webkit-overflow-scrolling: touch; /* Ensures smooth, kinetic momentum scrolling on iOS */
+    padding: 16px !important;    /* Slightly tighter padding for smaller phone screens */
+  }
+}
+
+
+
+
+

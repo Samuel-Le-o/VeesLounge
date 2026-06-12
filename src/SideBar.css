@@ -1,0 +1,242 @@
+:root {
+  --bg-color: #fdf5f7;
+  --sidebar-gradient: linear-gradient(160deg, #f08eb0 0%, #eba3b9 100%);
+  --sidebar-hover: rgba(255, 255, 255, 0.12);
+  --primary-pink: #df446e;
+  --text-dark: #2d3748;
+  --text-light: #718096;
+  --card-bg: #ffffff;
+  --border-color: #f0f0f0;
+}
+
+/* ==========================================================================
+   1. SHARED BASE STYLES & DESKTOP VIEWPORT LAYOUT
+   ========================================================================== */
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  background-color: #fdf5f7;
+  overflow: hidden; /* Keeps parent view structurally contained */
+}
+
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background-color: #0D0D0D;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: white;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  font-size: 0.98rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.nav-item .icon {
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+.nav-item:hover {
+  background: var(--sidebar-hover);
+}
+
+.nav-item.active {
+  background: var(--primary-pink);
+  font-weight: 600;
+}
+
+.sidebar-bottom {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: auto; /* Guarantees layout is pushed downward */
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-info strong {
+  font-size: 0.95rem;
+}
+
+.ad-logout-btn {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.ad-logout-btn:hover {
+  background: var(--primary-pink);
+  border-color: var(--primary-pink);
+}
+
+/* Hidden elements on Desktop layout engine by default */
+.mobile-topbar,
+.sidebar-overlay {
+  display: none;
+}
+
+
+/* ==========================================================================
+   2. MOBILE & TABLET RESPONSIVE ENGINE (768px and down)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  /* Reveal Top Bar with active menu triggers */
+  .mobile-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0D0D0D;
+    color: white;
+    padding: 16px 18px;
+    position: sticky;
+    top: 0;
+    z-index: 1200;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .mobile-logo {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  .menu-toggle {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Structural Transformation into Fluid, Self-Contained Off-Canvas Drawer */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    
+    /* Strict viewport confinement logic */
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100); /* Prevents mobile browser bar masking clipping bugs */
+    
+    /* Fluid standalone scrolling dynamics */
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; /* Forces native iOS inertial hardware acceleration scrolling */
+    
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1500;
+  }
+
+  /* Trigger state injected when admin clicks hamburger */
+  .sidebar.show-sidebar {
+    transform: translateX(0);
+  }
+
+  /* Active Translucent Backdrop Mask Layer */
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: 1400;
+  }
+
+  .sidebar-nav {
+    padding-top: 20px;
+  }
+
+  .nav-item {
+    padding: 16px 22px;
+    font-size: 0.95rem;
+  }
+
+  .sidebar-bottom {
+    padding-bottom: 35px; /* Leaves clear breathing space at the base of the scroll track */
+  }
+}
+
+/* ==========================================================================
+   3. EXTRA SMALL PHONES (480px and down)
+   ========================================================================== */
+@media (max-width: 480px) {
+  .mobile-topbar {
+    padding: 14px 15px;
+  }
+
+  .mobile-logo {
+    font-size: 1rem;
+  }
+
+  .sidebar {
+    width: 275px; /* Strict uniform layout width boundaries */
+    max-width: 85%;
+  }
+
+  .nav-item {
+    font-size: 0.92rem;
+    padding: 15px 20px;
+  }
+
+  .ad-logout-btn {
+    padding: 11px;
+    font-size: 0.9rem;
+  }
+}
+
+.profile-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Adjust to match your exact layout avatar width */
+  height: 40px; /* Adjust to match your exact layout avatar height */
+  border-radius: 50%;
+  background-color: rgba(190, 24, 93, 0.1); 
+  color: #be185d;
+}

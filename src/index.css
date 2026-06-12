@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+.hero-bg{
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.4), transparent 40%),
+    linear-gradient(
+      90deg,
+      #f7e9ea 0%,
+      #e9d4d2 40%,
+      #d8b1ad 75%,
+      #c7938f 100%
+    );
+}

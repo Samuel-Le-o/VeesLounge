@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://w3.org" viewBox="240 70 320 160" width="100%" height="100%">
+  <!-- SOLID WHITE BACKGROUND FILL -->
+  <rect x="240" y="70" width="320" height="160" fill="#ffffff" />
+
+  <!-- LEFT 'A' (Sleek Geometric Black Monogram) -->
+  <path d="M260 210 L300 90 L340 210 L322 210 L300 135 L278 210 Z" fill="#000000" />
+  <path d="M285 185 L315 185 L315 193 L285 193 Z" fill="#000000" />
+
+  <!-- CENTER ICON (Precision Wireframe Diamond) -->
+  <g transform="translate(365, 90)">
+    <!-- Base Shape Fill -->
+    <polygon points="35,0 0,35 35,115 70,35" fill="#f49ac2" opacity="0.4" />
+    
+    <!-- Fine-Line Vector Facets -->
+    <polygon points="35,0 0,35 70,35" fill="none" stroke="#e04f96" stroke-width="2.5" stroke-linejoin="round" />
+    <polygon points="0,35 35,115 70,35" fill="none" stroke="#e04f96" stroke-width="2.5" stroke-linejoin="round" />
+    <line x1="35" y1="0" x2="35" y2="115" stroke="#e04f96" stroke-width="2.5" />
+    <line x1="16" y1="16" x2="35" y2="35" stroke="#e04f96" stroke-width="2" />
+    <line x1="54" y1="16" x2="35" y2="35" stroke="#e04f96" stroke-width="2" />
+    <line x1="0" y1="35" x2="35" y2="35" stroke="#e04f96" stroke-width="2" />
+    <line x1="70" y1="35" x2="35" y2="35" stroke="#e04f96" stroke-width="2" />
+  </g>
+
+  <!-- RIGHT 'A' (Sleek Geometric Pink Monogram) -->
+  <path d="M460 210 L500 90 L540 210 L522 210 L500 135 L478 210 Z" fill="#e04f96" />
+  <path d="M485 185 L515 185 L515 193 L485 193 Z" fill="#e04f96" />
+</svg>

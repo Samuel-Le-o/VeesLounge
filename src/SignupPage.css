@@ -1,0 +1,236 @@
+/* FULL PAGE BACKGROUND */
+.main-sp {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* BACKGROUND BLUR GLOWS */
+.background-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.glow-1 {
+  width: 500px;
+  height: 500px;
+  background: rgba(59, 130, 246, 0.2);
+  top: -150px;
+  left: -150px;
+}
+
+.glow-2 {
+  width: 450px;
+  height: 450px;
+  background: rgba(214, 51, 108, 0.15);
+  bottom: -150px;
+  right: -150px;
+}
+
+/* CENTER CONTAINER */
+.signup-cont {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* Sits cleanly over back glows */
+}
+
+/* CARD */
+.signup-card {
+  width: 100%;
+  max-width: 420px;
+  background: #000;
+  padding: 35px 32px;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(214, 51, 108, 0.06), 0 4px 12px rgba(0, 0, 0, 0.02);
+  animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+/* TITLE & SUBTEXT */
+.signup-title {
+  text-align: center;
+  margin: 0 0 8px 0;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.p-text {
+  text-align: center;
+  margin: 0 0 24px 0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* INPUT GROUP */
+.sup-input-group {
+  margin-bottom: 20px;
+}
+
+/* LABELS */
+.sup-input-group label.signup-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+
+/* INPUT BOX WRAPPER */
+.sup-input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* INPUT FIELD */
+.sup-input-box input {
+ width: 100%;
+  height: 55px;
+
+  border-radius: 14px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  background: rgba(255,255,255,0.04);
+
+  color: white;
+
+  padding: 0 45px;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.3s ease;
+}
+
+.sup-input-box input::placeholder {
+  color: #94a3b8;
+}
+
+.sup-input-box input:focus {
+  border-color: #B76E79;
+
+  background: rgba(255,255,255,0.06);
+
+  box-shadow:
+    0 0 0 4px rgba(59,130,246,0.15);
+}
+
+/* LEFT ICON POSITIONING */
+.sup-left-icon {
+  position: absolute;
+  left: 15px;
+  color: #64748b;
+  font-size: 14px;
+  pointer-events: none;
+  transition: color 0.25s ease;
+}
+
+.sup-input-box input:focus ~ .sup-left-icon {
+  color: #d6336c;
+}
+
+/* RIGHT EYE ICON POSITIONING */
+.sup-right-icon {
+  position: absolute;
+  right: 15px;
+  color: #64748b;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+.sup-right-icon:hover {
+  color: #0f172a;
+  background-color: #f1f5f9;
+}
+
+/* SUBMIT BUTTON */
+.signup-btn {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0 24px 0;
+  border: none;
+  border-radius: 10px;
+   background:  linear-gradient(135deg, #B76E79, #1a1a1a);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+   box-shadow:
+    0 8px 20px rgba(0,0,0,0.25),
+    inset 0 1px 1px rgba(255,255,255,0.08);
+}
+
+.signup-btn:hover {
+  transform: translateY(-3px);
+
+  background:linear-gradient(135deg, #F4C2C2, #000000);
+
+  border-color: rgba(59,130,246,0.35);
+
+  box-shadow:
+    0 10px 25px rgba(37,99,235,0.25),
+    0 0 20px rgba(59,130,246,0.35),
+    0 0 40px rgba(59,130,246,0.18),
+
+    inset 0 1px 1px rgba(255,255,255,0.12);
+  }
+
+.signup-btn:active {
+  transform: translateY(1px);
+}
+
+/* LINK FOOTER REDIRECT */
+.login-redirect-text {
+  color: #64748b;
+  font-weight: 500;
+  font-size: 13.5px;
+  text-align: center;
+}
+
+.login-link {
+  color:  #B76E79;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 4px;
+  transition: color 0.2s ease;
+}
+
+.login-link:hover {
+  color: #F4C2C2;
+  text-decoration: underline;
+}
+
+/* ENTRANCE ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
