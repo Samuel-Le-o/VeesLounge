@@ -6,6 +6,7 @@ import toast from "react-hot-toast"
 import { useShop } from "../../utilities/ShopContext"
 import ProductPage from "../pages/ProductPage"
 
+import vespic from '../assets/vespic.png'
 import logo from '../assets/logo.png'
 import PurchaseOrderSummary from "./PurchaseOrderSummary"
 import axios from "axios"
@@ -250,7 +251,7 @@ export default function NavBar({ activePage, favoriteCount, cartCount, setFavori
                     </button>
                     
                     <div className="logo cursor-pointer" onClick={homeHandler}>
-                        <img src={logo} alt="Logo" className="w-24 h-8 md:w-28 md:h-10 object-contain" />
+                        <img src={vespic} alt="Logo" className="w-24 h-8 md:w-28 md:h-10 object-contain" />
                     </div>
 
                     {
