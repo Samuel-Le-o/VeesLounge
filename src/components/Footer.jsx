@@ -10,7 +10,7 @@ export default function Footer() {
                 {/* COLUMN 1: BRAND LOGO & STATEMENT */}
                 <div className="flex flex-col gap-4">
                     <h1 className="text-white font-bold text-lg md:text-xl tracking-wider font-serif">
-                        ALLURING <span className='text-pink-500'>ACCENT</span>
+                        VeesBeauty <span className='text-pink-500'>Lounge</span>
                     </h1>
                     <p className="text-[11px] md:text-xs text-zinc-500 leading-relaxed max-w-xs">
                         Crafting timeless, empowered fine jewelry collections. Discover signature designs built with certified brilliance.
@@ -65,13 +65,13 @@ export default function Footer() {
                         <li>
                             <a href="tel:+233556981498" className="flex items-center gap-3 hover:text-pink-500 transition-colors group">
                                 <FaPhone className="text-zinc-600 group-hover:text-pink-500 transition-colors" />
-                                <span className="font-semibold text-zinc-300">+233 55 698 1498</span>
+                                <span className="font-semibold text-zinc-300">+244 XXX XXX</span>
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:alluringaccent@gmail.com" className="flex items-center gap-3 hover:text-pink-500 transition-colors group">
+                            <a href="mailto:VeesBeautyLounge@gmail.com" className="flex items-center gap-3 hover:text-pink-500 transition-colors group">
                                 <FaEnvelope className="text-zinc-600 group-hover:text-pink-500 transition-colors" />
-                                <span className="text-zinc-300">alluringaccent@gmail.com</span>
+                                <span className="text-zinc-300">VeesBeautyLounge@gmail.coM</span>
                             </a>
                         </li>
                         <li>
@@ -87,7 +87,7 @@ export default function Footer() {
                 <div className="relative w-full min-h-[60px]">
                   <div className="flex justify-center items-center absolute md:static right-[20%] bottom-60 ">
                     <a className="rounded-full shadow-sm animate-pulse hover:animate-none cursor-pointer"
-                         href={`https://wa.me/+233556981498`}
+                         href={`https://wa.me/244 XXX XXX`}
                          target="_blank"
                          rel="noreferrer"
                     >
@@ -100,7 +100,7 @@ export default function Footer() {
             {/* LOWER SUB-FOOTER RE-COPYRIGHT REGION */}
             <div className="max-w-6xl mx-auto px-4 md:px-8 pt-8 flex md:flex-row justify-center items-center gap-4">
                 <p className="text-center md:text-left text-[11px] md:text-xs text-zinc-600 font-medium">
-                    &copy; 2026 Alluring Accent Shop. All rights reserved.
+                    &copy; 2026 VeesBeautyLounge. All rights reserved.
                 </p>
             </div>
         </footer>

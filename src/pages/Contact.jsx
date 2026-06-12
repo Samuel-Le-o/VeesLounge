@@ -40,12 +40,12 @@ import Footer from '../components/Footer'
 
                     <div className="info-box">
                         <FaPhoneAlt className="info-icon" />
-                        <span>+233 55 698 1498</span>
+                        <span>+244 XXX XXX</span>
                     </div>
 
                     <div className="info-box">
                         <FaEnvelope className="info-icon" />
-                        <span>alluringaccent@gmail.com</span>
+                        <span>VeesBeautyLounge@gmail.com</span>
                     </div>
 
                     {/* SOCIALS */}
